@@ -31,12 +31,14 @@ public class LinuxPathTraversal {
         this.executor = new Executor(this.heirarchyManager);
     }
 
+    // Entry Path.
     public static void main(String[] args) throws IOException {
         LogManager.getLogManager().reset();
         LinuxPathTraversal linuxPathTraversal = new LinuxPathTraversal();
         String input;
         System.out.println("Application Started ... ");
 
+        // Application will run continously to get commands from terminal
         while (true) {
             input = bufferedReader.readLine();
             if (input.length() < 1) continue;
